@@ -15,7 +15,7 @@ function close_menu(ele) {
 add_todo_form.addEventListener("submit", (event) => {
   event.preventDefault();
   if (todo_time_input.value && todo_title_input.value) {
-    fetch("../todo/php/addNewTodo.php", {
+    fetch("../task-manager/php/addNewTodo.php", {
       body: new FormData(add_todo_form),
       method: "post",
     })

@@ -1,4 +1,4 @@
-fetch("/todo/json/tasks.json")
+fetch("/task-manager/json/tasks.json")
   .then((server_response) => {
     return server_response.json();
   })
