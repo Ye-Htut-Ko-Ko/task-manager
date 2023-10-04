@@ -39,14 +39,16 @@
             placeholder="take book from Leo at 12:00AM ged class"
             rows="4"
           ></textarea>
-          <!-- <button onclick="add_new_todo()">Save</button> -->
+          <p onclick="todo_done(this)" id="todo-finish-btn" class="btn">
+            Finished
+          </p>
         </form>
       </div>
       <!-- end each todo detail popup box -->
       <!-- add new todo popup box -->
       <div class="popup-box" id="add-new-todo">
         <form class="inner" id="add-todo-form">
-          <img src="icons/remove.png" onclick="close_menu(this)" />
+          <img src="icons/remove.png" onclick="close_menu()" />
           <label for="task-time">When to do the task</label>
           <input
             type="text"
@@ -69,7 +71,7 @@
             placeholder="take book from Leo at 12:00AM ged class"
             rows="4"
           ></textarea>
-          <button>Save</button>
+          <button class="btn">Save</button>
         </form>
       </div>
       <!-- end add new todo popup box -->
@@ -87,14 +89,27 @@
     </section>
 
     <div class="menu">
-      <img src="icons/to-do-list.png" class="active" />
-      <img src="icons/note.png" />
-
-      <img src="icons/schedule.png" />
-      <img src="icons/storage.png" />
+      <img
+        src="icons/to-do-list.png"
+        class="active"
+        onclick="change_page(this)"
+        id="task_page"
+      />
+      <img src="icons/note.png" onclick="change_page(this)" id="note_page" />
+      <img
+        src="icons/schedule.png"
+        onclick="change_page(this)"
+        id="calender_page"
+      />
+      <img
+        src="icons/storage.png"
+        onclick="change_page(this)"
+        id="storage_page"
+      />
     </div>
     <script src="js/main.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/init.js"></script>
+    <script src="js/menu.js"></script>
   </body>
 </html>

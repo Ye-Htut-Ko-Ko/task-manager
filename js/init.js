@@ -28,6 +28,7 @@ fetch("/task-manager/json/tasks.json")
           <div class="todo" onclick="show_todo_menu(this)" id="todo-${task.id}">
             <p class="time">${task.time}</p>
             <p class="task">${task.title}</p>
+            <img src="icons/badge-check.svg" />
           </div>
         `;
       }

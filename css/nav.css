@@ -40,4 +40,6 @@ nav h2 {
 .menu img.active {
   width: 38px;
   height: 38px;
+  /* box-shadow: 1px 1px 10px #333;
+  border-radius: 10px; */
 }

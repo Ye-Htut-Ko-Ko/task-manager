@@ -3,13 +3,15 @@ function show_todo_menu(ele) {
   todo_menu.style.display = "flex";
   todo_time_edit.value = ele.children[0].innerText;
   todo_title_edit.value = ele.children[1].innerText;
+  // todo_finish_btn.setAttribute("which_task", ele.id.substring(5));
+  todo_finish_btn.setAttribute("which-task", ele.id);
 }
 
 function open_add_todo_box() {
   add_todo_box.style.display = "flex";
 }
-function close_menu(ele) {
-  ele.parentNode.parentNode.style.display = "none";
+function close_menu() {
+  todo_menu.style.display = "none";
 }
 
 add_todo_form.addEventListener("submit", (event) => {
@@ -39,3 +41,10 @@ add_todo_form.addEventListener("submit", (event) => {
     show_err("please fill all the input below");
   }
 });
+
+function todo_done(ele) {
+  document
+    .getElementById(ele.getAttribute("which-task"))
+    .classList.add("finish");
+  close_menu();
+}

@@ -40,10 +40,13 @@
   /* background-color: var(--darker); */
 }
 #tasks .todo img {
+  display: none;
+}
+#tasks .todo.finish img {
   width: 30px;
-  opacity: 1;
   position: absolute;
   right: 25px;
+  display: block;
 }
 
 #trash h1 {

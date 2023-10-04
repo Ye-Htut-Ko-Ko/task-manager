@@ -16,10 +16,13 @@ let todo_title_edit = document.getElementById("task-title-edit");
 let todo_detail_edit = document.getElementById("task-detail-edit");
 let todo_menu = document.getElementById("todo-menu");
 let todo_trash = document.getElementById("trash");
+let menu_icons = document.querySelectorAll(".menu img");
+let todo_finish_btn = document.querySelector("#todo-finish-btn");
 
 let err = document.getElementById("err");
 
 let trashed = false;
+let current_page = "task";
 
 function show_err(msg) {
   err.innerText = msg;

@@ -76,7 +76,7 @@ body {
   resize: none;
 }
 
-.popup-box button {
+.popup-box .btn {
   width: 150px;
   height: 40px;
   border: none;
@@ -88,4 +88,6 @@ body {
   background-color: #55ff55;
   box-shadow: #0b410b 1px 1px 5px;
   cursor: pointer;
+  text-align: center;
+  line-height: 40px;
 }
