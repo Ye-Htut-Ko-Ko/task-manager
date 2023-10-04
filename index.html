@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal manager</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
+    /> -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/task.css" />
+  </head>
+  <body>
+    <nav>
+      <h2>Today</h2>
+      <img src="img/logo.jpg" />
+    </nav>
+    <p id="err">sss</p>
+    <!-- todo tasks section  -->
+    <section id="tasks">
+      <div id="black-cover"></div>
+      <!-- todo lists -->
+      <div id="todo-list"></div>
+      <!-- end todo lists -->
+      <!-- each todo detail popup box -->
+      <div class="popup-box" id="todo-menu">
+        <form class="inner" id="edit-todo-form">
+          <img src="icons/remove.png" onclick="close_menu(this)" />
+          <label for="task-time-edit">When to do the task</label>
+          <input type="text" id="task-time-edit" placeholder="12:00AM" />
+          <label for="task-title-edit">Name of the task</label>
+          <input type="text" id="task-title-edit" placeholder="Take book" />
+          <label for="task-detail-edit">detail description</label>
+          <textarea
+            type="text"
+            id="task-detail-edit"
+            placeholder="take book from Leo at 12:00AM ged class"
+            rows="4"
+          ></textarea>
+          <!-- <button onclick="add_new_todo()">Save</button> -->
+        </form>
+      </div>
+      <!-- end each todo detail popup box -->
+      <!-- add new todo popup box -->
+      <div class="popup-box" id="add-new-todo">
+        <form class="inner" id="add-todo-form">
+          <img src="icons/remove.png" onclick="close_menu(this)" />
+          <label for="task-time">When to do the task</label>
+          <input
+            type="text"
+            id="task-time"
+            name="task-time"
+            placeholder="12:00AM"
+          />
+          <label for="task-title">Name of the task</label>
+          <input
+            type="text"
+            id="task-title"
+            name="task-title"
+            placeholder="Take book"
+          />
+          <label for="task-detail">detail description</label>
+          <textarea
+            type="text"
+            id="task-detail"
+            name="task-detail"
+            placeholder="take book from Leo at 12:00AM ged class"
+            rows="4"
+          ></textarea>
+          <button>Save</button>
+        </form>
+      </div>
+      <!-- end add new todo popup box -->
+      <!-- floating plus icon to add new todo list -->
+      <img
+        src="icons/plus1.png"
+        alt=""
+        onclick="open_add_todo_box()"
+        id="add-todo-icon"
+      />
+      <div id="trash">
+        <hr />
+        <h1>Trash</h1>
+      </div>
+    </section>
+
+    <div class="menu">
+      <img src="icons/to-do-list.png" class="active" />
+      <img src="icons/note.png" />
+
+      <img src="icons/schedule.png" />
+      <img src="icons/storage.png" />
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/init.js"></script>
+  </body>
+</html>

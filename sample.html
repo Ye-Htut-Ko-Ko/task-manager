@@ -1,0 +1,26 @@
+<div id="todo-list">
+  <div class="todo" id="todo-1" onclick="show_todo_menu(this)">
+    <p class="time">9:00AM</p>
+    <p class="task">Eat Breakfast</p>
+  </div>
+</div>
+
+<div class="popup-box" id="todo-menu">
+  <div class="inner">
+    <img src="icons/remove.png" onclick="close_menu(this)" />
+    <label for="task-time-edit">When to do the task</label>
+    <input type="text" id="task-time-edit" placeholder="12:00AM" />
+    <label for="task-title-edit">Name of the task</label>
+    <input type="text" id="task-title-edit" placeholder="Take book" />
+    <label for="task-detail-edit">detail description</label>
+    <textarea
+      type="text"
+      id="task-detail-edit"
+      placeholder="take book from Leo at 12:00AM ged class"
+      rows="4"
+    ></textarea>
+    <!-- <button onclick="add_new_todo()">Save</button> -->
+  </div>
+
+  <script></script>
+</div>

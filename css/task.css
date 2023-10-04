@@ -1,0 +1,69 @@
+#tasks {
+  width: 100%;
+  height: fit-content;
+  min-height: var(--height);
+  padding: 16px;
+  overflow-y: scroll;
+  padding-bottom: 110px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+#tasks::-webkit-scrollbar {
+  display: none;
+}
+#tasks .todo {
+  width: 100%;
+  height: 50px;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  user-select: none;
+  overflow: hidden;
+}
+#tasks .todo .time {
+  width: 160px;
+  text-align: center;
+  text-transform: uppercase;
+}
+#tasks .todo .task {
+  width: 100%;
+  padding: 0 10px;
+  text-transform: capitalize;
+}
+#tasks .todo.finish {
+  opacity: 0.6;
+  text-decoration: line-through;
+  /* background-color: var(--darker); */
+}
+#tasks .todo img {
+  width: 30px;
+  opacity: 1;
+  position: absolute;
+  right: 25px;
+}
+
+#trash h1 {
+  text-align: center;
+  margin: 10px 0;
+}
+#trash hr {
+  margin-top: 20px;
+}
+#trash {
+  display: none;
+}
+
+#add-todo-icon {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 65px;
+  right: 30px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
