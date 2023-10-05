@@ -43,8 +43,12 @@ add_todo_form.addEventListener("submit", (event) => {
 });
 
 function todo_done(ele) {
+  let a = new FormData();
+  a.append("id", ele.getAttribute("which-task").subString(5));
+
   document
     .getElementById(ele.getAttribute("which-task"))
     .classList.add("finish");
   close_menu();
+  console.log(ele.getAttribute("which-task").subString(5));
 }

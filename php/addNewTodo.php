@@ -17,5 +17,4 @@
     fclose($my_file);
     echo '{"id":"' . $json["total"] . '"}';
   }
-    
 ?>
